@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "1d1a1c66-622b-46bf-8c00-7ef54cd16d7e",
+		"name": "SSD Assignement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19900039"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzY3YWJjMjg1ODRjYjc1OTU4ZmY1YzIiLCJyb2xlIjoiYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhbGxvd19tZXNzYWdlIiwiYWxsb3dfZG93bmxvYWQiLCJhbGxvd191cGxvYWQiLCJhbGxvd19kZWxldGUiLCJhbGxvd19zaGFyZSJdLCJpYXQiOjE2Njc3Mzg1NjJ9.qLkXqYkXeQK9_SMb_6ChAm_8MER1B-0nFXLA6ELNu8g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Nimal\",\n  \"last_name\": \"Perera\",\n  \"password\": \"Nimal#@1998\",\n  \"user_name\": \"cyb47\",\n  \"phone_number\": \"0773261541\",\n  \"email\": \"nimal@gmail.com\",\n  \"role\": \"worker\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"password\": \"Rusiru#@1998\",\n  \"user_name\": \"cyb40\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ssdserverapp.azurewebsites.net/login",
+							"protocol": "https",
+							"host": [
+								"ssdserverapp",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzY3YWJjMjg1ODRjYjc1OTU4ZmY1YzIiLCJyb2xlIjoiYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhbGxvd19tZXNzYWdlIiwiYWxsb3dfZG93bmxvYWQiLCJhbGxvd191cGxvYWQiLCJhbGxvd19kZWxldGUiLCJhbGxvd19zaGFyZSJdLCJpYXQiOjE2Njc3Mzg1NjJ9.qLkXqYkXeQK9_SMb_6ChAm_8MER1B-0nFXLA6ELNu8g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8090/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzcxMThkZDI5OTI1NjY2MWVlN2YxYTkiLCJyb2xlIjoiYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhbGxvd19tZXNzYWdlIiwiYWxsb3dfZG93bmxvYWQiLCJhbGxvd191cGxvYWQiLCJhbGxvd19kZWxldGUiLCJhbGxvd19zaGFyZSJdLCJjcmVhdGVkQXQiOiIyMDIyLTExLTEzVDE4OjUyOjIxLjUzM1oiLCJpYXQiOjE2NjgzNjU1NDEsImV4cCI6MTY2ODM2NzM0MX0.z55OYyaFpKxOgjVR8l8CsjNYNiC54Z2YBFguEq6ltP8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://ssdserverapp.azurewebsites.net/user",
+							"protocol": "https",
+							"host": [
+								"ssdserverapp",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "Upload File",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzcxMThkZDI5OTI1NjY2MWVlN2YxYTkiLCJyb2xlIjoiYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhbGxvd19tZXNzYWdlIiwiYWxsb3dfZG93bmxvYWQiLCJhbGxvd191cGxvYWQiLCJhbGxvd19kZWxldGUiLCJhbGxvd19zaGFyZSJdLCJjcmVhdGVkQXQiOiIyMDIyLTExLTEzVDE4OjUyOjIxLjUzM1oiLCJpYXQiOjE2NjgzNjU1NDEsImV4cCI6MTY2ODM2NzM0MX0.z55OYyaFpKxOgjVR8l8CsjNYNiC54Z2YBFguEq6ltP8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/rusiruabhisheak/Downloads/2022-170-blind-review.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://ssdserverapp.azurewebsites.net/upload",
+							"protocol": "https",
+							"host": [
+								"ssdserverapp",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download File",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzcxMThkZDI5OTI1NjY2MWVlN2YxYTkiLCJyb2xlIjoiYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhbGxvd19tZXNzYWdlIiwiYWxsb3dfZG93bmxvYWQiLCJhbGxvd191cGxvYWQiLCJhbGxvd19kZWxldGUiLCJhbGxvd19zaGFyZSJdLCJjcmVhdGVkQXQiOiIyMDIyLTExLTEzVDE4OjUyOjIxLjUzM1oiLCJpYXQiOjE2NjgzNjU1NDEsImV4cCI6MTY2ODM2NzM0MX0.z55OYyaFpKxOgjVR8l8CsjNYNiC54Z2YBFguEq6ltP8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://ssdserverapp.azurewebsites.net/download/637140b471f42d548a3dd7a9",
+							"protocol": "https",
+							"host": [
+								"ssdserverapp",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"download",
+								"637140b471f42d548a3dd7a9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get File Info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzY3NWExOTc0ZDM0ZWMzN2M1NGY5MGQiLCJyb2xlIjoiYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhbGxvd19tZXNzYWdlIiwiYWxsb3dfZG93bmxvYWQiLCJhbGxvd191cGxvYWQiLCJhbGxvd19kZWxldGUiLCJhbGxvd19zaGFyZSJdLCJpYXQiOjE2Njc3MTc2NTh9.1222XOtoEVIcII8E2cxJIHi7NT99cUOaZ8SYaDJGcaU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8090/file/info/63677faa7437cfe941a2bd09",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"file",
+								"info",
+								"63677faa7437cfe941a2bd09"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Files for User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzZhYTAyNTZmNDgzZWJhNThkMmViYmIiLCJyb2xlIjoid29ya2VyIiwicGVybWlzc2lvbnMiOlsiYWxsb3dfbWVzc2FnZSJdLCJpYXQiOjE2Njc5MzIxOTd9.XrbPvN85Q1EPUfu6e6c1X_ICdVfTqSU3PGCJlTuiECg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8090/files",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"files"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
